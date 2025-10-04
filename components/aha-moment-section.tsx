@@ -22,6 +22,7 @@ import {
   Sparkles,
   BookOpen,
 } from "lucide-react"
+import NextLink from "next/link"
 
 const integrations = [
   { name: "Zoom", icon: Video, color: "bg-blue-500" },
@@ -49,76 +50,78 @@ export function AhaMomentSection() {
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Yoga Sequencing with Images */}
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 hover:shadow-2xl transition-all duration-300">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-white" />
+          <NextLink href="/sequencing" className="block">
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900">Visual Yoga Sequencing</h3>
+                  <p className="text-sm text-gray-500">Create sequences with pose images</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900">Visual Yoga Sequencing</h3>
-                <p className="text-sm text-gray-500">Create sequences with pose images</p>
+
+              <div className="space-y-4">
+                <div className="bg-gradient-to-r from-violet-50 to-purple-50 p-4 rounded-xl border border-violet-200">
+                  <h4 className="font-semibold text-violet-900 mb-3">Morning Flow Sequence</h4>
+                  <div className="grid grid-cols-4 gap-2 mb-3">
+                    <div className="aspect-square bg-gradient-to-br from-violet-100 to-violet-200 rounded-lg flex items-center justify-center border border-violet-300">
+                      <div className="text-center">
+                        <div className="text-2xl mb-1">🧘</div>
+                        <span className="text-xs text-violet-700 font-medium">Mountain</span>
+                      </div>
+                    </div>
+                    <div className="aspect-square bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center border border-purple-300">
+                      <div className="text-center">
+                        <div className="text-2xl mb-1">🙆</div>
+                        <span className="text-xs text-purple-700 font-medium">Forward</span>
+                      </div>
+                    </div>
+                    <div className="aspect-square bg-gradient-to-br from-pink-100 to-pink-200 rounded-lg flex items-center justify-center border border-pink-300">
+                      <div className="text-center">
+                        <div className="text-2xl mb-1">🤸</div>
+                        <span className="text-xs text-pink-700 font-medium">Plank</span>
+                      </div>
+                    </div>
+                    <div className="aspect-square bg-gradient-to-br from-rose-100 to-rose-200 rounded-lg flex items-center justify-center border border-rose-300">
+                      <div className="text-center">
+                        <div className="text-2xl mb-1">🧎</div>
+                        <span className="text-xs text-rose-700 font-medium">Child</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-violet-700">12 poses • 45 min</span>
+                    <button className="px-3 py-1 bg-violet-500 text-white text-xs rounded-full hover:bg-violet-600 transition-colors">
+                      Edit Sequence
+                    </button>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-xl border border-blue-200">
+                  <h4 className="font-semibold text-blue-900 mb-3">AI Suggestions</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 p-2 bg-white rounded-lg border border-blue-200">
+                      <Sparkles className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm text-gray-700">Add Sun Salutation A between poses 2-3</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-2 bg-white rounded-lg border border-cyan-200">
+                      <Sparkles className="w-4 h-4 text-cyan-600" />
+                      <span className="text-sm text-gray-700">Include hip opener for better flow</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 rounded-xl border border-green-200">
+                  <p className="text-sm text-green-800">
+                    <span className="font-semibold">Smart sequencing:</span> AI analyzes pose transitions for safety and
+                    flow optimization
+                  </p>
+                </div>
               </div>
             </div>
-
-            <div className="space-y-4">
-              <div className="bg-gradient-to-r from-violet-50 to-purple-50 p-4 rounded-xl border border-violet-200">
-                <h4 className="font-semibold text-violet-900 mb-3">Morning Flow Sequence</h4>
-                <div className="grid grid-cols-4 gap-2 mb-3">
-                  <div className="aspect-square bg-gradient-to-br from-violet-100 to-violet-200 rounded-lg flex items-center justify-center border border-violet-300">
-                    <div className="text-center">
-                      <div className="text-2xl mb-1">🧘</div>
-                      <span className="text-xs text-violet-700 font-medium">Mountain</span>
-                    </div>
-                  </div>
-                  <div className="aspect-square bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center border border-purple-300">
-                    <div className="text-center">
-                      <div className="text-2xl mb-1">🙆</div>
-                      <span className="text-xs text-purple-700 font-medium">Forward</span>
-                    </div>
-                  </div>
-                  <div className="aspect-square bg-gradient-to-br from-pink-100 to-pink-200 rounded-lg flex items-center justify-center border border-pink-300">
-                    <div className="text-center">
-                      <div className="text-2xl mb-1">🤸</div>
-                      <span className="text-xs text-pink-700 font-medium">Plank</span>
-                    </div>
-                  </div>
-                  <div className="aspect-square bg-gradient-to-br from-rose-100 to-rose-200 rounded-lg flex items-center justify-center border border-rose-300">
-                    <div className="text-center">
-                      <div className="text-2xl mb-1">🧎</div>
-                      <span className="text-xs text-rose-700 font-medium">Child</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-violet-700">12 poses • 45 min</span>
-                  <button className="px-3 py-1 bg-violet-500 text-white text-xs rounded-full hover:bg-violet-600 transition-colors">
-                    Edit Sequence
-                  </button>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-xl border border-blue-200">
-                <h4 className="font-semibold text-blue-900 mb-3">AI Suggestions</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-3 p-2 bg-white rounded-lg border border-blue-200">
-                    <Sparkles className="w-4 h-4 text-blue-600" />
-                    <span className="text-sm text-gray-700">Add Sun Salutation A between poses 2-3</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-2 bg-white rounded-lg border border-cyan-200">
-                    <Sparkles className="w-4 h-4 text-cyan-600" />
-                    <span className="text-sm text-gray-700">Include hip opener for better flow</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 rounded-xl border border-green-200">
-                <p className="text-sm text-green-800">
-                  <span className="font-semibold">Smart sequencing:</span> AI analyzes pose transitions for safety and
-                  flow optimization
-                </p>
-              </div>
-            </div>
-          </div>
+          </NextLink>
 
           {/* Market Research Based Curriculum */}
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 hover:shadow-2xl transition-all duration-300">
@@ -165,7 +168,6 @@ export function AhaMomentSection() {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-200">
                 <h4 className="font-semibold text-blue-900 mb-3">Generated Curriculum</h4>
                 <div className="space-y-2">
@@ -182,7 +184,6 @@ export function AhaMomentSection() {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-green-50 to-teal-50 p-3 rounded-xl border border-green-200">
                 <p className="text-sm text-green-800">
                   <span className="font-semibold">Market-driven:</span> AI analyzes local demand, competitor offerings,
