@@ -5,11 +5,13 @@ import { Sparkles } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function MarketplaceHero() {
-  const [showFull, setShowFull] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false)
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowFull(true), 1000)
-    return () => clearTimeout(timer)
+    const interval = setInterval(() => {
+      setIsExpanded((prev) => !prev)
+    }, 3000)
+    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -17,17 +19,16 @@ export function MarketplaceHero() {
       <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-muted/30 to-primary/10" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-12">
-        {/* Animated Brand Name */}
         <div className="space-y-6">
           <div className="flex items-center justify-center gap-4">
-            <div className="relative">
-              <div className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent transition-all duration-1000">
-                {showFull ? "OurBiz" : "OB"}
+            <button onClick={() => setIsExpanded((prev) => !prev)} className="relative cursor-pointer group">
+              <div className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent transition-all duration-700 hover:scale-105">
+                {isExpanded ? "OurBiz" : "OB"}
               </div>
               <div className="absolute -top-2 -right-2">
-                <Sparkles className="w-8 h-8 text-secondary animate-pulse" />
+                <Sparkles className="w-8 h-8 text-secondary animate-pulse group-hover:rotate-12 transition-transform" />
               </div>
-            </div>
+            </button>
           </div>
 
           <p className="text-xl md:text-2xl text-muted-foreground font-light animate-fade-in">

@@ -1,6 +1,7 @@
 import { MarketplaceHero } from "@/components/marketplace-hero"
 import { CategorySection } from "@/components/category-section"
 import { CollaborationSection } from "@/components/collaboration-section"
+import { BetaRegistration } from "@/components/beta-registration"
 import { MarketplaceCta } from "@/components/marketplace-cta"
 
 export default function HomePage() {
@@ -9,6 +10,7 @@ export default function HomePage() {
       <MarketplaceHero />
       <CategorySection />
       <CollaborationSection />
+      <BetaRegistration />
       <MarketplaceCta />
     </main>
   )
