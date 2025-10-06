@@ -1,23 +1,13 @@
-import { HeroSection } from "@/components/hero-section"
-import { ProblemSection } from "@/components/problem-section"
-import { SolutionSection } from "@/components/solution-section"
-import { AhaMomentSection } from "@/components/aha-moment-section"
-import { TestimonialSection } from "@/components/testimonial-section"
-import { CtaPricingSection } from "@/components/cta-pricing-section"
-import { FaqSection } from "@/components/faq-section"
-import { FinalCtaSection } from "@/components/final-cta-section"
+import { MarketplaceHero } from "@/components/marketplace-hero"
+import { CategorySection } from "@/components/category-section"
+import { MarketplaceCta } from "@/components/marketplace-cta"
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <AhaMomentSection />
-      <TestimonialSection />
-      <CtaPricingSection />
-      <FaqSection />
-      <FinalCtaSection />
+    <main className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
+      <MarketplaceHero />
+      <CategorySection />
+      <MarketplaceCta />
     </main>
   )
 }
