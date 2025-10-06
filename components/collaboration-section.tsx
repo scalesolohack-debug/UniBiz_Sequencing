@@ -23,7 +23,7 @@ export function CollaborationSection() {
     },
     {
       professional1: "Physiotherapist",
-      professional2: "Pilates Instructor",
+      professional2: "Personal Trainer",
       benefit: "Rehabilitation & strength",
       description: "Provide comprehensive recovery and conditioning programs",
       icon1: "🩺",
