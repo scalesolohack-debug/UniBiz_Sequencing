@@ -59,7 +59,7 @@ export function MarketplaceHero() {
             </div>
           </div>
           <p className="text-sm md:text-base font-medium text-foreground">
-            Join <span className="font-bold text-primary">5,000+</span> professionals getting listed & thriving
+            Join <span className="font-bold text-primary">5,000+</span> professionals having 10x growth
           </p>
         </div>
 
