@@ -32,7 +32,7 @@ export function MarketplaceHero() {
           </div>
 
           <p className="text-xl md:text-2xl text-muted-foreground font-light animate-fade-in">
-            Your All-in-One Platform to Grow, Connect & Thrive
+            Your Operations Lead that let's you Grow, Connect & Thrive
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export function MarketplaceHero() {
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
-            Get Started Free
+            Click Here to Join
           </Button>
         </div>
       </div>
