@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Sparkles, Users } from "lucide-react"
+import { Sparkles, Users, TrendingUp } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function MarketplaceHero() {
@@ -49,10 +49,17 @@ export function MarketplaceHero() {
           </p>
         </div>
 
-        <div className="flex items-center justify-center gap-2 text-muted-foreground">
-          <Users className="w-5 h-5" />
-          <p className="text-sm md:text-base font-light">
-            Join 5,000+ professionals already transforming their practice with OurBiz
+        <div className="inline-flex items-center gap-3 px-6 py-3 bg-background/80 backdrop-blur-sm border border-primary/20 rounded-full shadow-sm">
+          <div className="flex -space-x-2">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+              <Users className="w-4 h-4 text-primary-foreground" />
+            </div>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
+              <TrendingUp className="w-4 h-4 text-primary-foreground" />
+            </div>
+          </div>
+          <p className="text-sm md:text-base font-medium text-foreground">
+            Join <span className="font-bold text-primary">5,000+</span> professionals getting listed & thriving
           </p>
         </div>
 
