@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Sparkles } from "lucide-react"
+import { Sparkles, Users } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function MarketplaceHero() {
@@ -32,11 +32,10 @@ export function MarketplaceHero() {
           </div>
 
           <p className="text-xl md:text-2xl text-muted-foreground font-light animate-fade-in">
-            The Operating System for Beauty & Wellness Professionals
+            Your All-in-One Platform to Grow, Connect & Thrive
           </p>
         </div>
 
-        {/* Main Headline */}
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight">
             Bringing{" "}
@@ -47,6 +46,13 @@ export function MarketplaceHero() {
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground text-balance max-w-3xl mx-auto font-light">
             One platform. All your tools. Grow your beauty or wellness business with confidence.
+          </p>
+        </div>
+
+        <div className="flex items-center justify-center gap-2 text-muted-foreground">
+          <Users className="w-5 h-5" />
+          <p className="text-sm md:text-base font-light">
+            Join 5,000+ professionals already transforming their practice with OurBiz
           </p>
         </div>
 
